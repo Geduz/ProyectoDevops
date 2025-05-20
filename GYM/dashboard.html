@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - PowerFit</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-dumbbell"></i>
+                <span>PowerFit</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="membresias.html" class="nav-link">Membresías</a></li>
+                    <li><a href="productos.html" class="nav-link">Productos</a></li>
+                    <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-outline">Cerrar Sesión</button>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="dashboard">
+            <div class="container">
+                <div class="dashboard-header">
+                    <div>
+                        <h1>Dashboard</h1>
+                        <p>Gestiona membresías, productos y visualiza estadísticas</p>
+                    </div>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus-circle"></i>
+                        Nuevo
+                    </button>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <h3>Ingresos Totales</h3>
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value">$15,231.89</div>
+                            <p class="stat-change positive">+20.1% del mes anterior</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <h3>Miembros Activos</h3>
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value">+573</div>
+                            <p class="stat-change positive">+12% del mes anterior</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <h3>Ventas</h3>
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value">+249</div>
+                            <p class="stat-change positive">+18% del mes anterior</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <h3>Productos</h3>
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value">+89</div>
+                            <p class="stat-change">+5 nuevos este mes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div class="tabs">
+                    <div class="tabs-header">
+                        <button class="tab-btn active" data-tab="memberships">Membresías</button>
+                        <button class="tab-btn" data-tab="products">Productos</button>
+                        <button class="tab-btn" data-tab="sales">Ventas</button>
+                    </div>
+
+                    <!-- Memberships Tab -->
+                    <div class="tab-content active" id="memberships-tab">
+                        <div class="tab-header">
+                            <h2>Gestión de Membresías</h2>
+                            <div class="tab-actions">
+                                <div class="search-box">
+                                    <i class="fas fa-search"></i>
+                                    <input type="search" placeholder="Buscar miembro...">
+                                </div>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-plus-circle"></i>
+                                    Nuevo Miembro
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Plan</th>
+                                        <th>Fecha Inicio</th>
+                                        <th>Fecha Fin</th>
+                                        <th>Estado</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="memberships-table-body">
+                                    <!-- Will be populated by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Products Tab -->
+                    <div class="tab-content" id="products-tab">
+                        <div class="tab-header">
+                            <h2>Gestión de Productos</h2>
+                            <div class="tab-actions">
+                                <div class="search-box">
+                                    <i class="fas fa-search"></i>
+                                    <input type="search" placeholder="Buscar producto...">
+                                </div>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-plus-circle"></i>
+                                    Nuevo Producto
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Categoría</th>
+                                        <th>Precio</th>
+                                        <th>Stock</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="products-table-body">
+                                    <!-- Will be populated by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Sales Tab -->
+                    <div class="tab-content" id="sales-tab">
+                        <div class="tab-header">
+                            <h2>Registro de Ventas</h2>
+                            <div class="tab-actions">
+                                <div class="search-box">
+                                    <i class="fas fa-search"></i>
+                                    <input type="search" placeholder="Buscar venta...">
+                                </div>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-plus-circle"></i>
+                                    Nueva Venta
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="sales-grid">
+                            <div class="sales-card">
+                                <div class="card-header">
+                                    <h3>Ventas Recientes</h3>
+                                    <p>Últimas 5 transacciones realizadas</p>
+                                </div>
+                                <div class="table-container">
+                                    <table class="data-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Cliente</th>
+                                                <th>Producto</th>
+                                                <th>Fecha</th>
+                                                <th>Monto</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="sales-table-body">
+                                            <!-- Will be populated by JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="sales-card">
+                                <div class="card-header">
+                                    <h3>Resumen de Ventas</h3>
+                                    <p>Estadísticas del mes actual</p>
+                                </div>
+                                <div class="chart-container">
+                                    <div class="chart-placeholder">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <h3>Estadísticas de Ventas</h3>
+                                        <p>Aquí se mostraría un gráfico con las estadísticas de ventas del mes actual.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-dumbbell"></i>
+                    <span>PowerFit</span>
+                </div>
+                <p class="copyright">© <span id="current-year"></span> PowerFit. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Términos</a>
+                    <a href="#">Privacidad</a>
+                    <a href="#">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

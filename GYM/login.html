@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - PowerFit</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-dumbbell"></i>
+                <span>PowerFit</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="membresias.html" class="nav-link">Membresías</a></li>
+                    <li><a href="productos.html" class="nav-link">Productos</a></li>
+                    <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-container">
+                    <div class="auth-tabs">
+                        <button class="auth-tab active" data-tab="login">Iniciar Sesión</button>
+                        <button class="auth-tab" data-tab="register">Registrarse</button>
+                    </div>
+
+                    <!-- Login Form -->
+                    <div class="auth-content active" id="login-tab">
+                        <div class="auth-header">
+                            <h2>Iniciar Sesión</h2>
+                            <p>Ingresa tus credenciales para acceder a tu cuenta</p>
+                        </div>
+                        <form id="login-form" class="form">
+                            <div class="form-group">
+                                <label for="login-email">Email</label>
+                                <input type="email" id="login-email" placeholder="ejemplo@correo.com">
+                            </div>
+                            <div class="form-group">
+                                <div class="password-label">
+                                    <label for="login-password">Contraseña</label>
+                                    <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                                </div>
+                                <input type="password" id="login-password">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Iniciar Sesión</button>
+                        </form>
+                    </div>
+
+                    <!-- Register Form -->
+                    <div class="auth-content" id="register-tab">
+                        <div class="auth-header">
+                            <h2>Crear Cuenta</h2>
+                            <p>Completa el formulario para registrarte</p>
+                        </div>
+                        <form id="register-form" class="form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="register-first-name">Nombre</label>
+                                    <input type="text" id="register-first-name" placeholder="Juan">
+                                </div>
+                                <div class="form-group">
+                                    <label for="register-last-name">Apellido</label>
+                                    <input type="text" id="register-last-name" placeholder="Pérez">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="register-email">Email</label>
+                                <input type="email" id="register-email" placeholder="ejemplo@correo.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="register-password">Contraseña</label>
+                                <input type="password" id="register-password">
+                            </div>
+                            <div class="form-group">
+                                <label for="register-confirm-password">Confirmar Contraseña</label>
+                                <input type="password" id="register-confirm-password">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Crear Cuenta</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-dumbbell"></i>
+                    <span>PowerFit</span>
+                </div>
+                <p class="copyright">© <span id="current-year"></span> PowerFit. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Términos</a>
+                    <a href="#">Privacidad</a>
+                    <a href="#">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

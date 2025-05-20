@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membresías - PowerFit</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-dumbbell"></i>
+                <span>PowerFit</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="membresias.html" class="nav-link active">Membresías</a></li>
+                    <li><a href="productos.html" class="nav-link">Productos</a></li>
+                    <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-outline">Iniciar Sesión</a>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Memberships Section -->
+        <section class="memberships">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Nuestras Membresías</h1>
+                    <p>Elige el plan que mejor se adapte a tus necesidades y objetivos</p>
+                </div>
+                <div class="pricing-cards">
+                    <!-- Basic Plan -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Plan Básico</h3>
+                            <p>Ideal para principiantes</p>
+                        </div>
+                        <div class="pricing-content">
+                            <div class="price">
+                                $299<span>/mes</span>
+                            </div>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Acceso a sala de pesas</li>
+                                <li><i class="fas fa-check"></i> Horario limitado (8am - 4pm)</li>
+                                <li><i class="fas fa-check"></i> Evaluación física inicial</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <button class="btn btn-primary btn-full">Seleccionar Plan</button>
+                        </div>
+                    </div>
+
+                    <!-- Standard Plan -->
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">Más Popular</div>
+                        <div class="pricing-header">
+                            <h3>Plan Estándar</h3>
+                            <p>Para entusiastas del fitness</p>
+                        </div>
+                        <div class="pricing-content">
+                            <div class="price">
+                                $499<span>/mes</span>
+                            </div>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Acceso completo 24/7</li>
+                                <li><i class="fas fa-check"></i> Clases grupales incluidas</li>
+                                <li><i class="fas fa-check"></i> 1 sesión con entrenador personal</li>
+                                <li><i class="fas fa-check"></i> Acceso a duchas y lockers</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <button class="btn btn-primary btn-full">Seleccionar Plan</button>
+                        </div>
+                    </div>
+
+                    <!-- Premium Plan -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Plan Premium</h3>
+                            <p>La experiencia completa</p>
+                        </div>
+                        <div class="pricing-content">
+                            <div class="price">
+                                $799<span>/mes</span>
+                            </div>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Todo lo del plan estándar</li>
+                                <li><i class="fas fa-check"></i> 4 sesiones con entrenador personal</li>
+                                <li><i class="fas fa-check"></i> Plan nutricional personalizado</li>
+                                <li><i class="fas fa-check"></i> Acceso a área VIP y spa</li>
+                                <li><i class="fas fa-check"></i> 10% descuento en productos</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <button class="btn btn-primary btn-full">Seleccionar Plan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Form -->
+        <section class="registration">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Regístrate Ahora</h2>
+                    <p>Completa el formulario y un asesor te contactará para finalizar tu inscripción</p>
+                </div>
+                <div class="form-container">
+                    <form id="registration-form" class="form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">Nombre</label>
+                                <input type="text" id="first-name" placeholder="Juan">
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Apellido</label>
+                                <input type="text" id="last-name" placeholder="Pérez">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="ejemplo@correo.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" placeholder="(123) 456-7890">
+                        </div>
+                        <div class="form-group">
+                            <label for="plan">Plan de Interés</label>
+                            <select id="plan">
+                                <option value="">Selecciona un plan</option>
+                                <option value="basic">Plan Básico</option>
+                                <option value="standard">Plan Estándar</option>
+                                <option value="premium">Plan Premium</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Enviar Solicitud</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-dumbbell"></i>
+                    <span>PowerFit</span>
+                </div>
+                <p class="copyright">© <span id="current-year"></span> PowerFit. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Términos</a>
+                    <a href="#">Privacidad</a>
+                    <a href="#">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
